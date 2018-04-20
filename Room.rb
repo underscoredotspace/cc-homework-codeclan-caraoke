@@ -14,4 +14,8 @@ class Room
   def checkout_guest(guest)
     @guests.delete(guest)
   end
+
+  def add_song(song)
+    @songs << song
+  end
 end

@@ -2,11 +2,13 @@ require('minitest/autorun')
 require('minitest/rg')
 require_relative('../Room')
 require_relative('../Guest')
+require_relative('../Song')
 
 class TestRoom < MiniTest::Test
   def setup
     @room = Room.new('Castle Room')
     @guest1 = Guest.new('Jane Schwartzkopf')
+    @song1 = Song.new('Girlfriend in a Coma', 'The Smiths')
   end
 
   def test_room_has_name
@@ -30,5 +32,10 @@ class TestRoom < MiniTest::Test
     @room.checkin_guest(@guest1)
     @room.checkout_guest(@guest1)
     assert_equal([], @room.guests)
+  end
+
+  def test_add_song_to_room
+    @room.add_song(@song1)
+    assert_equal([@song1], @room.songs)
   end
 end
