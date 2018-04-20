@@ -6,4 +6,8 @@ class Room
     @guests = []
     @songs = songs
   end
+
+  def add_guest(guest)
+    @guests << guest
+  end
 end
