@@ -3,10 +3,11 @@
 - songs: Song[]
 - guests: Guest[]
 - capacity: Integer
+- cost: Integer
 ## Methods
-- check_in(Guest)
-- check_out(Guest)
-- add_song(Song)
+- check_in(guest: Guest)
+- check_out(guest: Guest)
+- add_song(song: Song)
 - is_full?()
 
 # Song
@@ -19,5 +20,7 @@
 # Guest
 ## Properties
 - name: String
+- money: Integer
 ## Methods
-- 
+- spend_money(amount: Integer)
+- has_enough_money?(amount: Integer)
