@@ -8,7 +8,7 @@
 - check_in(guest: Guest)
 - check_out(guest: Guest)
 - add_song(song: Song)
-- is_full?()
+- is_full?() bool
 
 # Song
 ## Properties
@@ -22,5 +22,5 @@
 - name: String
 - money: Integer
 ## Methods
-- spend_money(amount: Integer)
-- has_enough_money?(amount: Integer)
+- pay(amount: Integer) bool
+- has_enough_money?(amount: Integer) bool
