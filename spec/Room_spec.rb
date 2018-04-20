@@ -21,7 +21,13 @@ class TestRoom < MiniTest::Test
   end
 
   def test_add_guest_to_room
-    @room.add_guest(@guest1)
+    @room.checkin_guest(@guest1)
     assert_equal([@guest1], @room.guests)
+  end
+
+  def test_remove_guest_from_room
+    @room.checkin_guest(@guest1)
+    @room.checkout_guest(@guest1)
+    assert_equal([], @room.guests)
   end
 end
