@@ -11,7 +11,7 @@ class Room
 
   def checkin_guest(guest)
     return if is_full?
-    @guests << guest if guest.pay(@cost) == @cost
+    @guests << guest if guest.pay(@cost)
   end
 
   def checkout_guest(guest)
